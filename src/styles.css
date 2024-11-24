@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
