@@ -1,0 +1,13 @@
+{
+  "add_to_cart": "Add to Cart",
+  "apply": "Apply",
+  "cart_summary": "Cart Summary",
+  "coupon_applied_successfully": "Coupon applied successfully",
+  "discount": "Discount",
+  "invalid_coupon_code": "Invalid coupon code",
+  "remove": "Remove",
+  "shipping": "Shipping",
+  "subtotal": "Subtotal",
+  "total": "Total",
+  "your_cart_is_empty": "Your cart is empty"
+}

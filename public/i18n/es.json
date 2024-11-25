@@ -1,0 +1,13 @@
+{
+  "add_to_cart": "Añadir al carrito",
+  "apply": "Aplicar",
+  "cart_summary": "Resumen del carrito",
+  "coupon_applied_successfully": "Cupón aplicado con éxito",
+  "discount": "Descuento",
+  "invalid_coupon_code": "Código de cupón inválido",
+  "remove": "Eliminar",
+  "shipping": "Envío",
+  "subtotal": "Subtotal",
+  "total": "Total",
+  "your_cart_is_empty": "Tu carrito está vacío"
+}

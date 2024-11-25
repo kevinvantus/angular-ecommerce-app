@@ -29,6 +29,15 @@ dependencies:
   '@angular/router':
     specifier: ^19.0.0
     version: 19.0.0(@angular/common@19.0.0)(@angular/core@19.0.0)(@angular/platform-browser@19.0.0)(rxjs@7.8.1)
+  '@colsen1991/ngx-translate-extract-marker':
+    specifier: ^3.0.1
+    version: 3.0.1(@angular/common@19.0.0)(@angular/core@19.0.0)
+  '@ngx-translate/core':
+    specifier: ^16.0.3
+    version: 16.0.3(@angular/common@19.0.0)(@angular/core@19.0.0)
+  '@ngx-translate/http-loader':
+    specifier: ^16.0.0
+    version: 16.0.0(@angular/common@19.0.0)(@angular/core@19.0.0)
   autoprefixer:
     specifier: ^10.4.20
     version: 10.4.20(postcss@8.4.49)
@@ -1602,6 +1611,17 @@ packages:
     engines: {node: '>=0.1.90'}
     dev: true
 
+  /@colsen1991/ngx-translate-extract-marker@3.0.1(@angular/common@19.0.0)(@angular/core@19.0.0):
+    resolution: {integrity: sha512-faQeH8zTKB8U+7kdsL54Mj48uJuMKhZ0/t2qONrxyBE5GwWGWxTf778cBi4UR23nOmBzo8A2fyEXCY0gtdkOVQ==}
+    peerDependencies:
+      '@angular/common': '>=14.2.0'
+      '@angular/core': '>=14.2.0'
+    dependencies:
+      '@angular/common': 19.0.0(@angular/core@19.0.0)(rxjs@7.8.1)
+      '@angular/core': 19.0.0(rxjs@7.8.1)(zone.js@0.15.0)
+      tslib: 2.8.1
+    dev: false
+
   /@discoveryjs/json-ext@0.6.3:
     resolution: {integrity: sha512-4B4OijXeVNOPZlYA2oEwWOTkzyltLao+xbotHQeqN++Rv27Y6s818+n2Qkp8q+Fxhn0t/5lA5X1Mxktud8eayQ==}
     engines: {node: '>=14.17.0'}
@@ -2585,6 +2605,28 @@ packages:
       typescript: 5.6.3
       webpack: 5.96.1(esbuild@0.24.0)
     dev: true
+
+  /@ngx-translate/core@16.0.3(@angular/common@19.0.0)(@angular/core@19.0.0):
+    resolution: {integrity: sha512-UPse66z9tRUmIpeorYodXBQY6O4foUmj9jy9cCuuja7lqdOwRBWPzCWqc+qYIXv5L2QoqZdxgHtqoUz+Q9weSA==}
+    peerDependencies:
+      '@angular/common': '>=16'
+      '@angular/core': '>=16'
+    dependencies:
+      '@angular/common': 19.0.0(@angular/core@19.0.0)(rxjs@7.8.1)
+      '@angular/core': 19.0.0(rxjs@7.8.1)(zone.js@0.15.0)
+      tslib: 2.8.1
+    dev: false
+
+  /@ngx-translate/http-loader@16.0.0(@angular/common@19.0.0)(@angular/core@19.0.0):
+    resolution: {integrity: sha512-l3okOHGVxZ1Bm55OpakSfXvI2yYmVmhYqgwGU4aIQIRUqpkBCrSDZnmrHTcZfsGJzXKB5E2D2rko9i28gBijmA==}
+    peerDependencies:
+      '@angular/common': '>=16'
+      '@angular/core': '>=16'
+    dependencies:
+      '@angular/common': 19.0.0(@angular/core@19.0.0)(rxjs@7.8.1)
+      '@angular/core': 19.0.0(rxjs@7.8.1)(zone.js@0.15.0)
+      tslib: 2.8.1
+    dev: false
 
   /@nodelib/fs.scandir@2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}

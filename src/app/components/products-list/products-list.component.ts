@@ -1,5 +1,4 @@
-import { Component, signal } from '@angular/core';
-import { Product } from '../../interfaces';
+import { Component } from '@angular/core';
 import { sampleProducts } from '../../data';
 import { ProductComponent } from '../product/product.component';
 

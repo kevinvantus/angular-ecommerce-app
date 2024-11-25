@@ -1,0 +1,13 @@
+{
+  "add_to_cart": "Ajouter au panier",
+  "apply": "Appliquer",
+  "cart_summary": "Résumé du panier",
+  "coupon_applied_successfully": "Coupon appliqué avec succès",
+  "discount": "Réduction",
+  "invalid_coupon_code": "Code promo invalide",
+  "remove": "Supprimer",
+  "shipping": "Livraison",
+  "subtotal": "Sous-total",
+  "total": "Total",
+  "your_cart_is_empty": "Votre panier est vide"
+}

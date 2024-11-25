@@ -1,8 +1,9 @@
 export interface Product {
   id: number;
-  name: string;
+  names: Record<string, string>;
   price: number;
   discount?: number;
+  currency: Record<string, string>;
 }
 
 export interface CartItem extends Product {

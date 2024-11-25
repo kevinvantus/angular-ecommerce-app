@@ -9,10 +9,17 @@ import {
 } from '@angular/forms';
 import { CartItemComponent } from '../cart-item/cart-item.component';
 import { CartService } from '../../services/cart.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { AppService } from '../../services/app.service';
 
 @Component({
   selector: 'ec-cart',
-  imports: [ReactiveFormsModule, CurrencyPipe, CartItemComponent],
+  imports: [
+    ReactiveFormsModule,
+    CurrencyPipe,
+    TranslateModule,
+    CartItemComponent,
+  ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',
 })
@@ -20,6 +27,7 @@ export class CartComponent implements OnInit {
   couponApplied = signal(false);
   couponValid = signal(false);
   submitted = signal(false);
+  currentLang = computed(() => this.appService.currentLang);
 
   cartItems = computed(() => this.cartService.getCart());
   subtotal = computed(() => this.cartService.getSubtotal());
@@ -29,7 +37,12 @@ export class CartComponent implements OnInit {
     couponCode: FormControl<string>;
   }>;
 
-  constructor(private cartService: CartService, private fb: FormBuilder) {}
+  constructor(
+    private cartService: CartService,
+    private fb: FormBuilder,
+    private translate: TranslateService,
+    private appService: AppService
+  ) {}
 
   ngOnInit() {
     this.form = this.fb.nonNullable.group({
@@ -37,6 +50,10 @@ export class CartComponent implements OnInit {
         validators: [Validators.required],
       }),
     });
+
+    this.translate.addLangs(['en', 'fr', 'es']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
   }
 
   get couponCode() {
