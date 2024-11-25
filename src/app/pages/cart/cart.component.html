@@ -23,25 +23,45 @@
   <div class="p-4 flex border-b">
     <span class="font-semibold">{{ "subtotal" | translate }}</span
     >:
-    <span class="ml-auto">{{ orderSummary().subtotal | currency }}</span>
+    <span class="ml-auto">{{
+      orderSummary().subtotal
+        | currency
+          : (cartItems()[0] | translateName : "currency" : currentLang())
+          : "symbol-narrow"
+    }}</span>
   </div>
   @if (orderSummary().couponDiscount > 0) {
   <div class="p-4 flex border-b">
     <span class="font-semibold">{{ "discount" | translate }}</span
     >:
-    <span class="ml-auto">{{ orderSummary().couponDiscount | currency }}</span>
+    <span class="ml-auto">{{
+      orderSummary().couponDiscount
+        | currency
+          : (cartItems()[0] | translateName : "currency" : currentLang())
+          : "symbol-narrow"
+    }}</span>
   </div>
   }
   <div class="p-4 flex border-b">
     <span class="font-semibold">{{ "shipping" | translate }}</span
     >:
-    <span class="ml-auto">{{ orderSummary().shipping | currency }}</span>
+    <span class="ml-auto">{{
+      orderSummary().shipping
+        | currency
+          : (cartItems()[0] | translateName : "currency" : currentLang())
+          : "symbol-narrow"
+    }}</span>
   </div>
 
   <div class="p-4 flex border-b">
     <span class="font-semibold">{{ "total" | translate }}</span
     >:
-    <span class="ml-auto">{{ orderSummary().total | currency }}</span>
+    <span class="ml-auto">{{
+      orderSummary().total
+        | currency
+          : (cartItems()[0] | translateName : "currency" : currentLang())
+          : "symbol-narrow"
+    }}</span>
   </div>
 
   <div class="mt-8 flex flex-col gap-1">

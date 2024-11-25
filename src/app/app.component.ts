@@ -1,20 +1,17 @@
-import { Component, computed, signal } from '@angular/core';
-import { ProductsListComponent } from './components/products-list/products-list.component';
-import { CartService } from './services/cart.service';
-import { NgClass } from '@angular/common';
-import { CartComponent } from './components/cart/cart.component';
+import { Component, computed } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { AppService } from './services/app.service';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'ec-root',
-  imports: [NgClass, ProductsListComponent, CartComponent],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   cart = computed(() => this.cartService.getCart());
-  isCartOpen = signal(false);
 
   constructor(
     private cartService: CartService,
@@ -26,9 +23,5 @@ export class AppComponent {
     const language = (event.target as HTMLSelectElement).value;
     this.translate.use(language);
     this.appService.currentLang = language;
-  }
-
-  toggleCart() {
-    this.isCartOpen.update((value) => !value);
   }
 }

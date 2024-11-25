@@ -7,10 +7,11 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { CartItemComponent } from '../cart-item/cart-item.component';
 import { CartService } from '../../services/cart.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AppService } from '../../services/app.service';
+import { CartItemComponent } from '../../components/cart-item/cart-item.component';
+import { TranslateNamePipe } from '../../pipes/translate-product-name.pipe';
 
 @Component({
   selector: 'ec-cart',
@@ -19,6 +20,7 @@ import { AppService } from '../../services/app.service';
     CurrencyPipe,
     TranslateModule,
     CartItemComponent,
+    TranslateNamePipe,
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css',

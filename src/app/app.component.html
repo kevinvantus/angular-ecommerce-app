@@ -1,9 +1,9 @@
 <div class="h-screen flex flex-col overflow-hidden">
   <header class="h-20 shrink-0 p-4 border-b flex items-center">
-    <h1 class="text-2xl font-bold">E-Commerce</h1>
+    <h1 class="text-2xl font-bold"><a routerLink="/">E-Commerce</a></h1>
 
     <div class="ml-auto flex gap-4">
-      <button type="button" class="relative" (click)="toggleCart()">
+      <a routerLink="/cart" class="relative text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -23,7 +23,7 @@
           {{ cart().length }}
         </span>
         }
-      </button>
+      </a>
 
       <select (change)="useLanguage($event)">
         <option value="en">English</option>
@@ -33,40 +33,9 @@
     </div>
   </header>
 
-  <main class="flex-1 lg:flex overflow-hidden">
-    <div
-      class="overflow-y-auto"
-      [ngClass]="isCartOpen() ? 'lg:w-1/2' : 'w-full'"
-    >
-      <ec-products-list
-        class="border-e-2 border-slate-200 p-4 w-full mx-auto overflow-y-auto"
-        [ngClass]="isCartOpen() ? 'lg:max-w-[700px]' : ''"
-      ></ec-products-list>
+  <main class="flex-1 lg:flex overflow-y-auto p-4">
+    <div class="w-full max-w-[800px] mx-auto">
+      <router-outlet />
     </div>
-
-    @if (isCartOpen()) {
-    <div
-      class="p-4 lg:w-1/2 overflow-y-auto absolute inset-0 bg-white lg:static"
-    >
-      <button
-        type="button"
-        class="fill-red-600 absolute top-4 right-4 lg:hidden"
-        (click)="toggleCart()"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 256 256"
-          class="inline-block"
-        >
-          <path
-            d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"
-          ></path>
-        </svg>
-      </button>
-      <ec-cart></ec-cart>
-    </div>
-    }
   </main>
 </div>
